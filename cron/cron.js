@@ -17,13 +17,6 @@ const ENUM_ERROR = {
 // -lockObject - A lock in object format {executeTimestamp, ufid, intervalTime?}
 // -lockString - A lock in string format 'executeTimestamp-ufid-intervalTime?'
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-//| INSTRUKCJA 
-//| -nie można tworzyc interwalu jesli isnieje juz lock z tym samym ufid
-//| -nie można tworzyc termu jesli istnieje juz term z ta sama execute date i ufid lub insteje intervallock z tym ufid
-//| -nie można tworzyc interwału z mniejszym interval time niz INTERVALDURATION
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
 class Cron {
     /**
      * @param {string} cronDir - The path where the cron locks should be stored.
